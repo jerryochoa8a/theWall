@@ -1,0 +1,46 @@
+body{
+    background-color: lightseagreen;
+    font-family: Gill Sans, sans-serif;
+}
+
+.reg{
+    background-color: mediumaquamarine;
+    display: inline-block;
+    width: 250px;
+    height: 600px;
+    margin-left: 200px;
+    padding-left: 15px;
+}
+
+.login{
+    float: right;
+    background-color: mediumaquamarine;
+    display: inline-block;
+    width: 250px;
+    height: 600px;
+    margin-left: 50px;
+    margin-right: 200px;
+    padding-left: 15px;
+}
+
+.welcome{
+    margin-left: 37%;
+    margin-top: 5%;
+}
+.reg h1{
+    text-align: center;
+}
+
+.login h1{
+    text-align: center;
+}
+
+.reg button{
+    margin-top: 50px;
+    margin-left: 25%;
+}
+
+.login button{
+    margin-top: 50px;
+    margin-left: 33%;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\css\wall.css">
+    {% load static %}
+    <title>home</title>
+</head>
+<body>
+    <div class="navbar">
+        <h1>CodingDojo Wall</h1>
+        <a href="/logout">log off</a>
+        <h2>welcome {{user.first_name}}</h2>
+    </div>
+    
+    <form action="home/post_mes" method="POST" class="mess">
+        {% csrf_token %} 
+        <h2>Post a message</h2>
+        <textarea name="message" cols="140" rows="5"></textarea>
+        <div>
+            <button type="submit">Post a message</button>
+        </div>
+    </form>
+    <a href="/home">Hide Comments</a>
+
+    {% for mess in all_mess reversed %}
+    <div class="tweets">
+        <h2>{{mess.user.first_name}}</h2>
+        <h3>{{mess.message}}</h3>
+    </div>
+
+    {% for comm in mess.comments.all %}	
+    <div class="tweets2">
+        <h4>{{comm.user.first_name}}</h4>
+        <li><i>{{comm.comment}}</i></li>
+    </div>
+    {% endfor %}
+        <form action="the_wall/post_com/{{mess.id}}" method="POST">
+            {% csrf_token %} 
+            <h3>Post a Comment</h3>
+            <textarea name="comment" cols="80" rows="3"></textarea>
+            <div>
+                <button type="submit">Post a comment</button>
+            </div>
+        </form>
+    {% endfor %}
+</body>
+</html>

@@ -1,9 +1,17 @@
 # theWall
 
-1) Practice connecting a Django application to a database
+connecting a Django application to a database
 
-2) Integrate the login app with another app
+Integrate the login app with another app
 
-3) Practice one-to-many relationships
+one-to-many relationships
 
-4)Practice validating user input and using flash messages
+validating user input and using flash messages
+
+Allow users to post messages
+
+Display all messages on the main page
+
+Allow users to comment on each message
+
+Display all comments per message
